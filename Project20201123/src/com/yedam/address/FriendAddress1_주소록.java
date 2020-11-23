@@ -17,16 +17,16 @@ public class FriendAddress1_주소록 {
 		Scanner scn = new Scanner(System.in);
 
 		while (true) {
-			System.out.println("-----------------------------------------");
+			System.out.println("-------------------------------------------------");
 			System.out.println("1.친구등록 2.학교친구 3.회사친구 4.전체리스트 5.친구선택 6.종료");
-			System.out.println("-----------------------------------------");
+			System.out.println("-------------------------------------------------");
 			System.out.print("선택> ");
 			int selectNo = scn.nextInt();
 
 			if (selectNo == 1) {
 				System.out.print("친구이름: ");
+				scn.nextLine(); // String 타입의 경우 엔터를 하나 소진시켜 주고 입력값을 받도록 설정해야 함. 엔터값 삭제 나중에 하면 데이터 안나옴.
 				String name = scn.nextLine();
-				scn.nextLine(); // 엔터를 소진시켜줌
 				System.out.print("연락처: ");
 				String phone = scn.nextLine();
 				Friend frnd = new Friend(name, phone);
@@ -39,8 +39,8 @@ public class FriendAddress1_주소록 {
 
 			} else if (selectNo == 2) {
 				System.out.print("친구이름: ");
-				String name = scn.nextLine();
 				scn.nextLine();
+				String name = scn.nextLine();
 				System.out.print("연락처: ");
 				String phone = scn.nextLine();
 				System.out.print("학교이름: ");
@@ -85,11 +85,15 @@ public class FriendAddress1_주소록 {
 				}
 
 			} else if (selectNo == 5) {
-				String name = scn.nextLine();
 				System.out.print("연락처: ");
 				String phone = scn.nextLine();
 				Friend frnd = new Friend(phone);
-				frnd.setPhone(phone);
+				frnd.getPhone();
+				for (int i = 0; i < friends.length; i++) {
+					if (frnd.getPhone().equals(phone)) {
+						
+					}
+				}
 				frnd.showFriendinfo();
 
 			} else if (selectNo == 6) {

@@ -36,7 +36,11 @@ public class CompFriend extends Friend{
 	@Override
 	public void showFriendinfo() { //source - 맨 위 옵션 선택하면 간단히 Override 생성 가능
 //		super.showFriendinfo();
-		System.out.println("이름: " + super.getName() + "연락처: " + super.getPhone() + "회사: " + this.company + "부서: " + this.department);
+		System.out.println("이름: " + super.getName());
+		System.out.println("연락처: " + super.getPhone());
+		System.out.println("회사: " + this.company);
+		System.out.println("부서: " + this.department);
+		
 		//부모 클래스를 그대로 호출하는 대신 재정의(Override)하는 작업
 		//super.get으로 부모 클래스의 필드값 불러오고, 내용에 맞게 클래스 내에 정의한 필드값 추가
 	}

@@ -16,7 +16,7 @@ public class Friend {
 	public Friend(String phone) {
 		this.phone = phone;
 	}
-	
+
 	public Friend(String name, String phone) {
 		this.name = name;
 		this.phone = phone;
@@ -41,7 +41,8 @@ public class Friend {
 	
 	//
 	public void showFriendinfo() {
-		System.out.println("이름: " + this.name + " " + "연락처: " + this.phone);
+		System.out.println("이름: " + this.name);
+		System.out.println("연락처: " + this.phone);
 	}
 
 }

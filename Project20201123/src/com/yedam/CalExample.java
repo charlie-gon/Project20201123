@@ -8,7 +8,7 @@ public class CalExample {
 	public static void main(String[] args) {
 		
 		//인스턴스 만들기(새로운 실체 만들기)
-		//new Calculatpr()의 의미: 생성자 호출
+		//new Calculator()의 의미: 생성자 호출
 		//Calculator클래스 타입의 c1 변수에 새롭게 만들어진 new Calculator를 담겠다
 		Calculator c1 = new Calculator(); 
 		c1.setColor("White"); //Calculator 클래스의 set method로 색상 지정

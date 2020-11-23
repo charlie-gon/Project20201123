@@ -10,6 +10,7 @@ public class StudentExample {
 		Student st1 = new Student();
 		st1.name = "Hong";
 		st1.school = "Yedam";
+		System.out.println(st1.name + st1.school);
 		st1.study();
 		
 		HighStudent hs1 = new HighStudent();
