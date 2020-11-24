@@ -23,7 +23,7 @@ public class StudentExample {
 		Student s3 = new Student("감바스대학교", "김빠에야", 456278, "국제통상");
 		
 		//배열 만드는 방법 숙지!
-		//데이터타입[] 변수;
+		//자료형[] 변수 / 자료형 변수 : 배열명
 		Student[] students = {s1,s2,s3};
 		for(Student s : students) {
 			if("감바스대학교".equals(s.getSchoolName())) { //같은 학교 이름 학생만 출력

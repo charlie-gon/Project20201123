@@ -8,7 +8,12 @@ public class PhoneExample {
 	public static void main(String[] args) {
 		
 		SmartPhone phone = new SmartPhone();
+		phone.ring();
+		phone.turnOff();
 		
+		DmbPhone dmb = new DmbPhone();
+		dmb.ring();
+		dmb.turnOff();
 		
 	}
 

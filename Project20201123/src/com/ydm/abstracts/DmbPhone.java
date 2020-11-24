@@ -15,7 +15,7 @@ public class DmbPhone extends Phone{
 	@Override
 	public void turnOff() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("DMB폰이 꺼집니다");
 	}
 
 }

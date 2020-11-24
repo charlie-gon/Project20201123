@@ -15,7 +15,7 @@ public class SmartPhone extends Phone{
 	@Override
 	public void turnOff() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("스마트폰이 꺼집니다");
 	}
 
 }

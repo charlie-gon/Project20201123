@@ -7,7 +7,7 @@ public class CarExample {
 	public static void main(String[] args) {
 
 		// 인스턴스 생성(실체 생성)
-		car c1 = new car();
+		car c1 = new car("Renault", "Sonata");
 		System.out.println(c1.getCompany());
 		System.out.println(c1.maxSpeed);
 		// 기본 생성자를 호출하여 값이 나오지 않음
