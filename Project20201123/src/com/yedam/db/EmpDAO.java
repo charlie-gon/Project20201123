@@ -11,7 +11,7 @@ public class EmpDAO {
 	
 	public void insertEmployee(Employee emp) {
 		String sql = "INSERT INTO dept80(last_name, hire_date)" + "VALUES(?,?)";
-		//employees 테이블은 제약조건이 많아 데이터값이 출력되지 않음. emp1이라는 테이블을 만들어서 진행할 것
+		//employees 테이블은 제약조건이 많아 데이터값이 출력되지 않음. emp2이라는 테이블로 진행할 것
 		try {
 			PreparedStatement psmt = conn.prepareStatement(sql);
 			//sql에 넣을 값 VALUES(?,?,?,?)에서 1,2,3,4번째 위치에 값을 넣겠다
