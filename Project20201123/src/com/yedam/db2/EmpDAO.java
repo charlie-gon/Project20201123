@@ -127,7 +127,7 @@ System.out.println(sql);
 		
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql); //sql 해석
-			pstmt.setInt(1, empId);
+			pstmt.setInt(1, empId); //쿼리에 값 세팅(1번 위치홀더(?)에 empId 값을 넣겠다)
 			int result = pstmt.executeUpdate();
 			
 			if(result == 1) {
