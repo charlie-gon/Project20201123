@@ -115,7 +115,6 @@ System.out.println(sql);
 			System.out.println(r + "건 수정됨.");
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -123,7 +122,22 @@ System.out.println(sql);
 
 	// 한건삭제
 	public void deleteEmp(int empId) {
-		conn = DAO.getConnection();
+		conn = DAO.getConnection(); //연결객체
 		sql = "delete from emp2 where employee_id = ?";
+		
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql); //sql 해석
+			pstmt.setInt(1, empId); //쿼리에 값 세팅(1번 위치홀더(?)에 empId 값을 넣겠다)
+			int result = pstmt.executeUpdate();
+			
+			if(result == 1) {
+				System.out.println("성공적으로 삭제했습니다.");
+			}else {
+				System.out.println("삭제되지 않았습니다.");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
 	}
 }

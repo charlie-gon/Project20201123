@@ -84,6 +84,7 @@ public class EmpMain { // EmpService 호출
 				service.updateEmp(vo);
 
 			} else if (selectNo == 5) {
+				System.out.println("삭제할 사원번호 입력: ");
 				int empId = scn.nextInt();
 				service.deleteEmp(empId);
 
