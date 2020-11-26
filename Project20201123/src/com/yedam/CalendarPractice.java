@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 public class CalendarPractice {
 	public static void main(String[] args) {
-		showCal(2020, 6);
+		showCal(2020, 1);
 	}
 
 	public static void showCal(int year, int month) {

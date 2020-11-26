@@ -110,11 +110,12 @@ public class BoardDAO {
 	//수정
 	public void updateBoard(BoardVO boardVO) {
 		conn = DAO.getConnection();
-		sql = "update board set title = ? where board_no = ?";
+		sql = "UPDATE board SET title = ? WHERE board_no = ?"; //set: 실제 수정될 것, where 수정될 것의 위치
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, boardVO.getTitle());
+			pstmt.setInt(2, boardVO.getBoardNo());
 			
 			int r = pstmt.executeUpdate();
 			System.out.println(r + "건이 수정되었습니다.");

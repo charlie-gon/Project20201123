@@ -23,9 +23,10 @@ public class BoardVO {
 		this.writer = writer;
 	}
 
-	public BoardVO(String writer) {
+	public BoardVO(String title, int boardNo) {
 		super();
-		this.writer = writer;
+		this.title = title;
+		this.boardNo = boardNo;
 	}
 
 	public BoardVO() {
@@ -75,7 +76,7 @@ public class BoardVO {
 
 	public void getBoardList() {
 		System.out.println("글번호: " + this.boardNo + " 제목: " + this.title + " 작성자: " + this.writer + " 글내용: "
-				+ this.content + "작성일자: " + this.date);
+				+ this.content + " 작성일자: " + this.date);
 	}
 
 }

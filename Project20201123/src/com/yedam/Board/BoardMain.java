@@ -56,13 +56,15 @@ public class BoardMain {
 
 				BoardDAO dao = new BoardDAO();
 				dao.deleteBoard(boardNo);
-
+				// 입력한 글 제목의 내용을 변경
 			} else if (selectNo == 5) {
-				System.out.println("수정할 글 제목을 입력하세요: ");
+				System.out.print("수정할 제목을 입력하세요: ");
 				scn.nextLine();
 				String title = scn.nextLine();
-				
-				BoardVO vo = new BoardVO(title);
+				System.out.print("글번호 입력: ");
+				int boardNo = scn.nextInt();
+
+				BoardVO vo = new BoardVO(title, boardNo);
 				BoardDAO dao = new BoardDAO();
 				dao.updateBoard(vo);
 
