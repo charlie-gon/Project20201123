@@ -12,5 +12,6 @@ public interface EmpService { //인터페이스
 	public void insertEmp(EmployeeVO empVO); //입력
 	public void updateEmp(EmployeeVO empVO); //수정
 	public void deleteEmp(int empId); //삭제
+	public List<EmployeeVO> getDeptList(String dept); //부서 정보 조회
 
 }

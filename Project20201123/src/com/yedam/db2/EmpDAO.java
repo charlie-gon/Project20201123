@@ -140,4 +140,32 @@ System.out.println(sql);
 		}
 		
 	}
+	
+	// 부서 조회(제네릭 활용)
+	public List<EmployeeVO> getDeptList(String dept){
+		conn = DAO.getConnection();
+		sql = "select * from emp3 where department_id = (select department_id from departments where department_name = ?)";
+		List<EmployeeVO> deptList = new ArrayList<>();
+		
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, dept);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				EmployeeVO vo = new EmployeeVO();
+				vo.setEmployeeId(rs.getInt("employee_id"));
+				vo.setFirstName(rs.getString("first_name"));
+				vo.setLastName(rs.getString("last_name"));
+				vo.setEmail(rs.getString("email"));
+				deptList.add(vo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return deptList;
+	}
+	
+	
+	
+	
 }

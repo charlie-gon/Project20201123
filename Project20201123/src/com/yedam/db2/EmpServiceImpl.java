@@ -39,6 +39,11 @@ public class EmpServiceImpl implements EmpService{ //구현클래스
 	public void deleteEmp(int empId) {
 		dao.deleteEmp(empId);
 	} //구현클래스 / EmpService를 구현하겠습니다.
+
+	@Override
+	public List<EmployeeVO> getDeptList(String dept) {
+		return dao.getDeptList(dept);
+	}
 	
 
 }
