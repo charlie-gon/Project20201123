@@ -44,7 +44,7 @@ public class EmpMain { // EmpService 호출
 				System.out.println("사원번호 입력하세요.");
 				int empId = scn.nextInt();
 				System.out.println("이름 입력하세요.");
-				scn.nextLine();
+				scn.nextLine(); //nextInt에서 남아있는 개행문자(\n) 제거
 				String lastName = scn.nextLine();
 				System.out.println("성을 입력하세요.");
 				String firstName = scn.nextLine();
@@ -91,7 +91,7 @@ public class EmpMain { // EmpService 호출
 
 			} else if (selectNo == 7) {
 				System.out.println("조회할 부서이름 입력:	");
-				scn.nextLine();
+				scn.nextLine(); //개행문자(줄 바꾸는 문자)를 무시, 즉 숫자 치고 엔터 누르면 엔터 전까지만 입력 받기 때문에 
 				String deptName = scn.nextLine();
 
 				List<EmployeeVO> list = service.getDeptList(deptName);
